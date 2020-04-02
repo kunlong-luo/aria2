@@ -4,12 +4,13 @@ ARIA2_WD=$HOME/.aria2
 SESSION=${ARIA2_WD}/aria2.session
 LOG=${ARIA2_WD}/aria2.log
 RPC_SECRET="token"
+WORK_DIR=$(dirname $(readlink -f $0))
 
 # init
 sudo yum update -y -q \
 &&  sudo yum install aria2 -y -q \
 &&  sudo mkdir $ARIA2_WD \
-&&  sudo wget --no-check-certificate -c -P $ARIA2_WD https://raw.githubusercontent.com/tony-parker-luo/aria2/master/aria2.conf \
+&&  sudo cp ${WORK_DIR}/aria2.conf $ARIA2_WD \
 &&  sudo touch $SESSION \
 &&  sudo touch $LOG
 
