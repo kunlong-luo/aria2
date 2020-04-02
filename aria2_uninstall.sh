@@ -34,7 +34,7 @@ stop_service() {
 
 main() {
   stop_service
-  sudo yum remove aria2 -y \
+  sudo yum remove aria2 -y -q \
   &&  sudo yum clean all \
   &&  sudo rm -rf $ARIA2_DIR
 }
