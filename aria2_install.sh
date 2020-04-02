@@ -18,7 +18,6 @@ sudo yum update -y -q \
 if [[ -n $1 ]]; then
   RPC_SECRET=$1
 fi
-echo $RPC_SECRET
 
 sudo aria2c --rpc-secret=$RPC_SECRET --conf-path=${ARIA2_WD}/aria2.conf -D
 echo -e "\033[32mAria2 Starup Success!\033[0m"
