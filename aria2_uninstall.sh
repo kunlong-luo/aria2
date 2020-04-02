@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-ARIA2_DIR=$HOME/.aria2
+ARIA2_DIR=/config
 SERVICE_NAME=aria2c
 
 get_pid() {
